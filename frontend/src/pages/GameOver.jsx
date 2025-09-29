@@ -22,6 +22,7 @@ export default function GameOver() {
     }
   };
 
+  
   return (
     <div className="vh-100 d-flex justify-content-center align-items-center homepage-bg">
       <div className="card bg-dark text-white text-center p-5 shadow-lg" style={{ maxWidth: "600px" }}>

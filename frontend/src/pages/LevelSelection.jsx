@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css"; // or create LevelSelection.css
 import {useNavigate} from "react-router-dom"
 function LevelSelection() {
+  
     const navigate=useNavigate()
   return (
     <>
