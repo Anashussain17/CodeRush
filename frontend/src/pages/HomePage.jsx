@@ -25,6 +25,7 @@ import "../App.css";
 import {useNavigate} from "react-router-dom"
 import { useEffect } from "react";
 function HomePage() {
+  
     const navigate=useNavigate()
   return (
     <div className="sparkle-background homepage-bg">
@@ -33,8 +34,7 @@ function HomePage() {
         <h5 className=" text-warning">JavaScript Edition</h5>
         <p className="homepage-subtitle">Solve · Code · Conquer </p>
         <div className="d-flex flex-column gap-3 align-items-center">
-          <button className="btn-glow w-100" onClick={async()=>setTimeout(()=>{
-            navigate("/levels")},1000)}>Start Game</button>
+          <button className="btn-glow w-100" onClick={async()=>setTimeout(()=>{navigate("/levels")},1000)}>Start Game</button>
           <button className="btn btn-dark px-4 w-100" onClick={async()=>setTimeout(()=>{navigate("/howtoplay")},1000)} >How to Play</button>
           <button className="btn btn-dark px-4 w-100" onClick={async()=>setTimeout(()=>{navigate("/leaderboard")},1000)}>Leaderboard</button>
          
