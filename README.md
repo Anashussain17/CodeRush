@@ -74,7 +74,7 @@ npm install
 Create a `.env` file inside `/backend`:
 
 ```env
-PORT=5000
+PORT=5555
 MONGODB_URL=mongodb+srv://<username>:<password>@cluster.mongodb.net/coderush
 ```
 
@@ -122,4 +122,5 @@ Backend runs on **[http://localhost:5555](http://localhost:5000)**
 Built with ❤️ by Anas Hussain
 
 ```
+
 
