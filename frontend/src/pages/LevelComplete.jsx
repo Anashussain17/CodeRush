@@ -11,7 +11,7 @@ export default function LevelComplete() {
   const handleSave = async () => {
     if (!name) return alert("Enter your name!");
     try {
-      await axios.post("http://localhost:5000/api/leaderboard", {
+      await axios.post("http://localhost:5555/api/leaderboard", {
         name,
         score: state?.score || 0,
       });

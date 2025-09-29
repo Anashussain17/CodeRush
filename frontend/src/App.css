@@ -6,7 +6,7 @@ html, body, #root {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 .homepage-bg {
-  background: linear-gradient(270deg, #2a0845, #6441a5, #2a0845);
+  background: linear-gradient(270deg, #083945, #4178a5, #2a0845);
   background-size: 400% 400%;
   animation: backgroundSparkle 10s ease infinite;
   position: relative;

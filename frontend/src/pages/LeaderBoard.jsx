@@ -5,7 +5,7 @@ export default function Leaderboard() {
   const [scores, setScores] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/leaderboard")
+    axios.get("http://localhost:5555/api/leaderboard")
       .then(res => setScores(res.data))
       .catch(err => console.error(err));
   }, []);
