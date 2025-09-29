@@ -23,14 +23,20 @@ router.post("/", async (req, res) => {
 // ✅ Get top 10 scores
 router.get("/", async (req, res) => {
   try {
+    console.log("GET /api/leaderboard called ✅");  // log when API is hit
+
     const scores = await Score.find()
       .sort({ score: -1 })
       .limit(10);
-    res.json(scores);
+
+    console.log("Fetched scores:", scores); // log DB result
+
+    res.json(scores); // send response
   } catch (err) {
-    console.error(err);
+    console.error("Error in GET /api/leaderboard:", err);
     res.status(500).json({ error: "Server error" });
   }
 });
+
 
 export default router;

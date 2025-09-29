@@ -24,8 +24,6 @@ function App() {
         <Route path="/howtoplay" element={<HowToPlay/>}/>
     </Routes>
     
-   
-{/* <LevelSelection/> */}
     </>
   )
 }
