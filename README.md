@@ -117,10 +117,6 @@ Backend runs on **[http://localhost:5555](http://localhost:5000)**
 ![alt text](image.png)
 ![alt text](image-1.png)
 
-## 👨‍💻 Author
 
-Built with ❤️ by Anas Hussain
-
-```
 
 
