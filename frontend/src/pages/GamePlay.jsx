@@ -59,19 +59,40 @@ export default function GamePlay() {
       isCorrect = answer === question.answer;
     } else if (level === "intermediate") {
       isCorrect = answer.trim() === question.answer.trim();
-    } else if (level === "pro") {
-      try {
-        // eslint-disable-next-line no-eval
-        const userFunc = eval(`(${answer})`);
-        let passCount = 0;
-        question.testCases.forEach((tc) => {
-          if (userFunc(...tc.input) === tc.expected) passCount++;
-        });
-        isCorrect = passCount >= 2;
-      } catch {
-        isCorrect = false;
-      }
+    } if (level === "pro") {
+  try {
+    // Wrap the user’s function code and return the function itself
+    const wrappedCode = `
+      ${answer}
+      return typeof ${question.funcName} === "function" ? ${question.funcName} : null;
+    `;
+
+    // Create the function safely
+    const userFunc = new Function(wrappedCode)();
+    console.log("userFunc:", userFunc);
+console.log("typeof userFunc:", typeof userFunc);
+console.log("Testcases:", question.testcases);
+
+
+    if (typeof userFunc !== "function") {
+      throw new Error("Invalid function definition");
     }
+
+    // Run all testcases and compare results
+    const allPass = question.testcases.every(tc => {
+      const result = userFunc(...tc.args);
+      return JSON.stringify(result) === JSON.stringify(tc.expected);
+    });
+
+    isCorrect = allPass;
+  } catch (err) {
+    console.error("Pro evaluation error:", err);
+    isCorrect = false;
+  }
+}
+
+
+
 
     if (isCorrect) {
       setScore((prev) => prev + 5 + time);
