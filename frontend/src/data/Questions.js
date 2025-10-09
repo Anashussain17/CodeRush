@@ -154,87 +154,98 @@ console.log([..."hello"].length); // fill in
   ],
 
   pro: [
-      {
-      id: 1,
-      code: "Write a function `isEven(n)` that returns true if n is even.",
-      testcases: [
-        { input: 2, output: true },
-        { input: 5, output: false }
-      ]
-    },
-    {
-      id: 2,
-      code: "Write a function `square(n)` that returns the square of a number.",
-      testcases: [
-        { input: 3, output: 9 },
-        { input: -4, output: 16 }
-      ]
-    },
-    {
-      id: 3,
-      code: "Write a function `firstChar(str)` that returns the first character of a string.",
-      testcases: [
-        { input: "hello", output: "h" },
-        { input: "world", output: "w" }
-      ]
-    },
-    {
-      id: 4,
-      question: "Write a function `lastChar(str)` that returns the last character of a string.",
-      testcases: [
-        { input: "hello", output: "o" },
-        { input: "cat", output: "t" }
-      ]
-    },
-    {
-      id: 5,
-      code: "Write a function `doubleArray(arr)` that doubles each element in an array.",
-      testcases: [
-        { input: [1, 2, 3], output: [2, 4, 6] },
-        { input: [5], output: [10] }
-      ]
-    },
-    {
-      id: 6,
-      code: "Write a function `add(a, b)` that returns the sum of two numbers.",
-      testcases: [
-        { input: [2, 3], output: 5 },
-        { input: [10, -5], output: 5 }
-      ]
-    },
-    {
-      id: 7,
-      code: "Write a function `toUpper(str)` that converts a string to uppercase.",
-      testcases: [
-        { input: "hi", output: "HI" },
-        { input: "java", output: "JAVA" }
-      ]
-    },
-    {
-      id: 8,
-      code: "Write a function `toLower(str)` that converts a string to lowercase.",
-      testcases: [
-        { input: "Hi", output: "hi" },
-        { input: "JAVASCRIPT", output: "javascript" }
-      ]
-    },
-    {
-      id: 9,
-      code: "Write a function `arrayLength(arr)` that returns the length of an array.",
-      testcases: [
-        { input: [1, 2, 3], output: 3 },
-        { input: [], output: 0 }
-      ]
-    },
-    {
-      id: 10,
-      code: "Write a function `greet(name)` that returns 'Hello, name!'.",
-      testcases: [
-        { input: "Anas", output: "Hello, Anas!" },
-        { input: "JS", output: "Hello, JS!" }
-      ]
-    }
-  ],
+  {
+    id: 1,
+    question: "Write a function `isEven(n)` that returns true if n is even.",
+    funcName: "isEven",
+    testcases: [
+      { args: [2], expected: true },
+      { args: [5], expected: false }
+    ]
+  },
+  {
+    id: 2,
+    question: "Write a function `square(n)` that returns the square of a number.",
+    funcName: "square",
+    testcases: [
+      { args: [3], expected: 9 },
+      { args: [-4], expected: 16 }
+    ]
+  },
+  {
+    id: 3,
+    question: "Write a function `firstChar(str)` that returns the first character of a string.",
+    funcName: "firstChar",
+    testcases: [
+      { args: ["hello"], expected: "h" },
+      { args: ["world"], expected: "w" }
+    ]
+  },
+  {
+    id: 4,
+    question: "Write a function `lastChar(str)` that returns the last character of a string.",
+    funcName: "lastChar",
+    testcases: [
+      { args: ["hello"], expected: "o" },
+      { args: ["cat"], expected: "t" }
+    ]
+  },
+  {
+    id: 5,
+    question: "Write a function `doubleArray(arr)` that doubles each element in an array.",
+    funcName: "doubleArray",
+    testcases: [
+      { args: [[1, 2, 3]], expected: [2, 4, 6] },
+      { args: [[5]], expected: [10] }
+    ]
+  },
+  {
+    id: 6,
+    question: "Write a function `add(a, b)` that returns the sum of two numbers.",
+    funcName: "add",
+    testcases: [
+      { args: [2, 3], expected: 5 },
+      { args: [10, -5], expected: 5 }
+    ]
+  },
+  {
+    id: 7,
+    question: "Write a function `toUpper(str)` that converts a string to uppercase.",
+    funcName: "toUpper",
+    testcases: [
+      { args: ["hi"], expected: "HI" },
+      { args: ["java"], expected: "JAVA" }
+    ]
+  },
+  {
+    id: 8,
+    question: "Write a function `toLower(str)` that converts a string to lowercase.",
+    funcName: "toLower",
+    testcases: [
+      { args: ["Hi"], expected: "hi" },
+      { args: ["JAVASCRIPT"], expected: "javascript" }
+    ]
+  },
+  {
+    id: 9,
+    question: "Write a function `arrayLength(arr)` that returns the length of an array.",
+    funcName: "arrayLength",
+    testcases: [
+      { args: [[1, 2, 3]], expected: 3 },
+      { args: [[]], expected: 0 }
+    ]
+  },
+  {
+    id: 10,
+    question: "Write a function `greet(name)` that returns 'Hello, name!'.",
+    funcName: "greet",
+    testcases: [
+      { args: ["Anas"], expected: "Hello, Anas!" },
+      { args: ["JS"], expected: "Hello, JS!" }
+    ]
+  }
+],
+
 };
 
 export default questions;
