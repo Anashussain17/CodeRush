@@ -1,8 +1,8 @@
 // src/pages/LevelComplete.jsx
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
-
+// import axios from "axios";
+import API from "../api";
 export default function LevelComplete() {
   const { state } = useLocation(); // gets { score, level }
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export default function LevelComplete() {
   const handleSave = async () => {
     if (!name) return alert("Enter your name!");
     try {
-      await axios.post("http://localhost:5555/api/leaderboard", {
+      await API.post("/leaderboard", {
         name,
         score: state?.score || 0,
       });

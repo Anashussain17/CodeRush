@@ -114,6 +114,29 @@ html, body, #root {
   box-shadow: 0 0 25px rgb(168, 0, 0);
 }
 
+/* Responsive buttons for small screens */
+@media (max-width: 768px) {
+  .btn-glow,
+  .btn.btn-dark {
+    width: 90% !important;   /* make buttons fit screen width */
+    font-size: 0.9rem;       /* slightly smaller text */
+    padding: 10px 18px;      /* balanced padding */
+  }
+
+  .homepage-title {
+    font-size: 2.5rem;       /* smaller title for mobile */
+  }
+
+  .homepage-subtitle {
+    font-size: 1rem;
+  }
+
+  .text-warning {
+    font-size: 0.9rem;
+  }
+}
+
+
 
 /* Old */
  /* .home-container {

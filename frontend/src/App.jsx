@@ -1,5 +1,5 @@
 
-import {Routes,Route} from "react-router-dom"
+import {Routes,Route,Navigate} from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import { useEffect,useRef } from "react"
 import './App.css'
@@ -17,7 +17,7 @@ function AudioManager() {
 
   useEffect(() => {
     if (!gameMusicRef.current) {
-      gameMusicRef.current = new Audio("/sounds/gameMusic.mp3");
+      gameMusicRef.current = new Audio(import.meta.env.BASE_URL + "gameMusic.mp3");
       gameMusicRef.current.loop = true;
     }
 
@@ -32,11 +32,11 @@ function AudioManager() {
       gameMusicRef.current.pause();
 
       if (location.pathname === "/game-over") {
-        effectMusicRef.current = new Audio("/sounds/gameOver.mp3");
+        effectMusicRef.current =new Audio(import.meta.env.BASE_URL + "gameOver.mp3");
         effectMusicRef.current.play();
       }
       if (location.pathname === "/level-complete") {
-        effectMusicRef.current = new Audio("/sounds/levelComplete.mp3");
+        effectMusicRef.current = new Audio(import.meta.env.BASE_URL + "levelComplete.mp3");
         effectMusicRef.current.play();
       }
     } else {
@@ -57,7 +57,8 @@ function App() {
     <>
     <AudioManager/>
     <Routes>
-      <Route path="/" element={<HomePage/>}/>
+       <Route path="/" element={<Navigate to="/home" />} /> 
+      <Route path="/home" element={<HomePage/>}/>
          <Route path="/levels" element={<LevelSelection />} />
         <Route path="/play/:level" element={<GamePlay />} />
         <Route path="/game-over" element={<GameOver/>}/>
