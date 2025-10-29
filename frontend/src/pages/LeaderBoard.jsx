@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-
+// import axios from "axios";
+import API from "../api";
 export default function Leaderboard() {
 
   const [scores, setScores] = useState([]);
   
 
   useEffect(() => {
-    axios.get("http://localhost:5555/api/leaderboard")
+    API.get("/leaderboard")
       .then(res => setScores(res.data))
       .catch(err => console.error(err));
   }, []);
